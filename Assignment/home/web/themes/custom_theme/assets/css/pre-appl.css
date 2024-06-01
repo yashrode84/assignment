@@ -1,0 +1,335 @@
+/* Define CSS variables here */
+/* ========================= */
+:root {
+
+  --regular-font:		'Swiss Roman';
+  --light-font:			'Swiss Light';
+  --bold-font:			'Swiss Bold';
+  --regular-italic-font:	'Swiss Roman Italic';
+  --light-italic-font:		'Swiss Light Italic';
+  --bold-italic-font:		'Swiss Bold Italic';
+
+/*
+  --regular-font:		'Swiss_721 W01 Roman';
+  --light-font:			'Swiss_721 W01 Light';
+  --bold-font:			'Swiss_721 W01 Bold';
+*/
+/*
+  --regular-font:		'Swiss_721 Roman';
+  --light-font:			'Swiss_721 Light';
+  --bold-font:			'Swiss_721 Bold';
+  --regular-italic-font:	'Swiss_721 Roman Italic';
+  --light-italic-font:		'Swiss_721 Light Italic';
+  --bold-italic-font:		'Swiss_721 Bold Italic';
+
+/* Bootstrap v3.02 break-points at      768, 992 and 1200px */
+/* Error Agency    break-points at 500, 768 and 1150px      */
+  --xs-gap:			15px;					/* padding/margin gap for extra small screen width < 500px */
+  --md-gap:			40px;					/* padding/margin gap for medium screen width >= 768px, < 1150px */
+  --lg-gap:			100px;					/* padding/margin gap for large screen width >= 1150px */
+  
+  --sm-gap:			calc((100vw - 339.2px) / 10.72);	/* padding/margin gap for small screen width >= 500px, < 768px */
+/*
+  m = 1 / 10.72     = (var(--md-gap) - var(--xs-gap)) / (768px - 500px)
+  c = - m * 339.2px = var(--xs-gap) - (m * 500px)
+*/
+  --gap: var(--lg-gap);							/* See @media below for setting --gap according to Error Agency break-point */
+
+
+
+
+  --fa-li-width: 3.4em;				/* Width for FontAwesome icons in list items, size class "fa-lg" */
+
+  --xxxl-font-size: 40px;
+  --xxl-font-size: 38px;
+  --xxl2-font-size: 36px;
+  --xl2-font-size: 34px;
+  --xl-font-size: 32px;
+  --lg2-font-size: 30px;
+  --lg-font-size: 24px;
+  --ll-font-size: 22px;
+  --lm-font-size: 20px;
+  --ml-font-size: 18px;
+  --mm-font-size: 16.5px;
+  --md-font-size: 16px;
+  --ms-font-size: 15px;
+  --sm-font-size: 14px;
+  --sx-font-size: 12.5px;
+  --xs-font-size: 12px;
+
+  --body-FS:			16.5px;		/* Bootstrap 14px */
+  --h1-FS:			36px;		/* Bootstrap 36px */
+  --h2-FS:			30px;		/* Bootstrap 30px */
+  --h3-FS:			24px;		/* Bootstrap 24px */
+  --h4-FS:			18px;		/* Bootstrap 18px */
+  --h5-FS:			14px;		/* Bootstrap 14px */
+  --h6-FS:			12.5px;		/* Bootstrap 12px */
+
+  --hero-FS:			54px;
+  --hero-md-FS:			46px;
+  --hero-sm-FS:			34px;
+  --hero-xs-FS:			26px; 
+
+  --ttl-FS:			24px;
+  --ttl-md-FS:			22px;
+  --ttl-sm-FS:			20px;
+  --ttl2-FS:			40px;
+  --ttl2-md-FS:			32px;
+  --ttl2-sm-FS:			26px;
+  --ttl-txt-FS:			16.5px;		/* was 16px */
+  --ttl-txt-md-FS:		14px;
+
+  --nav-FS:			18px;
+  --nav2-FS:			15px;
+  --nav3-FS:			12.5px;
+  --this-section-FS:		16.5px;
+
+  --cta-ttl-FS:			22px;
+  --cta-ttl-md-FS:		20px;
+  --cta-txt-FS:			16.5px;		/* was 14px */
+  --cta-txt-md-FS:		14px;
+  --cta-txt-sm-FS:		12.5px;		/* was 12px */
+
+  --search-form-FS:		16.5px;
+  --panel-ttl-FS:		16.5px;
+  --cpn-FS:			14px;
+
+  --lnk-btn-FS:			16.5px;
+
+  --foot-ttl-FS:		24px;
+  --foot-ttl-md-FS:		22px;
+  --foot-ttl-sm-FS:		20px;
+  --foot-txt-FS:		14px;
+  --foot-soc-FS:		32px;		/* was 29px */
+  --foot-soc-sm-FS:		35px;
+  --foot-lgl-txt-FS:		12.5px;		/* was 12px */
+  --foot-soc-gap:		15px;		/* was 13px */
+  --foot-soc-sm-gap:		25px;		/* was 17px */
+
+
+						/*   C      M      Y      K    */
+  --grey98:			#fafafa;	/*   0      0      0      1.96 */
+  --grey89:			#e3e3e3;	/*   0      0      0     11    */
+  --lightgrey:			#d3d3d3;	/*   0      0      0     17.3  */
+  --grey60:			#999;		/*   0      0      0     40    */
+  --grey:			#777;		/*   0      0      0     53.3  */
+  --dark-grey:			#333;		/*   0      0      0     80    */
+  --dark-grey-2:		#222;		/*   0      0      0     86.7  */
+  --light-cobalt-grey:		#f6f9fd;	/*   2.77   1.58   0      0.78 */
+  --light-cornflower-grey:	#eaf6fc;	/*   7.14   2.38   0      1.17 */
+  --light-cornflower-grey-2:	#eef5fb;	/*   5.18   2.39   0      1.57 */
+  --light-cornflower-grey-3:	#e5f4fb;	/*   8.76   2.79   0      1.57 */
+  --light-cornflower-grey-4:	#d3ecf9;	/*  15.3    5.22   0      2.35 */
+  --light-azureish-grey:	#e2edf8;	/*   8.87   4.43   0      2.75 */
+  --light-azureish-grey-2:	#d9e9f6;	/*  11.8    5.28   0      3.53 */
+  --light-azureish-grey-3:	#d1e4f4;	/*  14.3    6.56   0      4.31 */
+  --light-cornflower:		#7ac6ec;	/*  48.3   16.1    0      7.45 */
+  --brilliant-cornflower:	#4db3e6;	/*  66.5   22.2    0      9.80 */
+  --brilliant-cornflower-2:	#20a0e0;	/*  85.7   28.6    0     12.2  */
+  --strong-cornflower:		#007dbb;	/* 100     33.2    0     26.7  */
+  --dark-cornflower:		#2a4b5e;	/*  55.3   20.2    0     63.1  */
+  --dark-azure:			#183f61;	/*  75.3   35.1    0     62.0  */
+  --dark-azure-2:		#13324d;	/*  75.3   35.1    0     69.8  */
+  --dark-azure-3:		#112d45;	/*  75.4   34.8    0     72.9  */
+  --dark-azure-4:		#0e2539;	/*  75.4   35.1    0     77.6  */
+  --vivid-yellow:		#ffed00;	/*   0      7.06 100      0    */
+
+  --white-color:		var(--grey98);
+  --dark-azure-2-90:		rgba(19, 50, 77, 0.9);	/* dark-azure-2, opacity 0.9 */
+  --dark-azure-2-95:		rgba(19, 50, 77, 0.95);	/* dark-azure-2, opacity 0.95 */
+
+
+  --acdn-hd-txt:		var(--dark-azure-2);
+  --acdn-hd-bkg:		var(--light-azureish-grey-2);
+  --acdn-hd-bkg-hv:		var(--light-azureish-grey);
+  --acdn-hd-bkg-alt:		var(--light-cornflower-grey-2);
+  --acdn-hd-bkg-alt-hv:		var(--light-cobalt-grey);
+  --acdn-hd-txt-open:		var(--white-color);
+  --acdn-hd-bkg-open:		var(--dark-azure);
+  --acdn-more-txt:		var(--strong-cornflower);
+  --acdn-more-bkg:		var(--light-cobalt-grey);
+  --acdn-more-txt-hv:		var(--white-color);
+  --acdn-more-bkg-hv:		var(--brilliant-cornflower-2);	/* was brilliant-cornflower */
+  --acdn-pnl-bdr:		var(--lightgrey);
+  --bdr-line:			var(--grey89);
+  --blq-txt:			var(--brilliant-cornflower);
+  --blq-foot:			var(--grey);
+  --blq-bdr:			var(--light-azureish-grey);
+  --blq-bdr-pre:		var(--grey60);
+  --blq-bkg:			var(--white-color);
+  --breadcrumb-bkg:		var(--dark-azure-4);
+  --foot-bkg:			var(--dark-azure-2);
+  --foot-txt:			var(--light-azureish-grey-2);
+  --foot-lnk:			var(--brilliant-cornflower);
+  --foot-lnk-hv:		var(--vivid-yellow);
+  --foot-lgl-txt:		var(--white-color);
+  --hero-bkg:			var(--dark-azure-4);
+  --hero-img-overlay:		var(--dark-azure-2);
+  --hero-lnk-btn-bkg-hv:	var(--dark-azure-2);
+  --hero-lnk-btn-ar-bkg:	var(--dark-azure-2);
+  --hero-lnk-btn-ar-bkg-hv:	var(--dark-azure-4);
+  --lnk:			var(--brilliant-cornflower-2);	/* was light-cornflower */
+  --lnk-hv:			var(--brilliant-cornflower);
+  --lnk-btn-bkg:		var(--brilliant-cornflower-2);	/* was brilliant-cornflower */
+  --lnk-btn-bkg-hv:		var(--brilliant-cornflower);	/* was brilliant-cornflower-2 */
+  --lnk-btn-txt:		var(--white-color);
+  --hl-txt-bkg:			var(--dark-azure-2-90);
+  --hl-txt-bkg-hv:		var(--dark-azure-2-95);
+  --hm-cta1-bkg:		var(--white-color);
+  --hm-cta2-bkg:		var(--light-cornflower-grey-4);
+  --hm-cta3-bkg:		var(--brilliant-cornflower);
+  --hm-cta-bkg-hv:		var(--dark-azure-2);
+  --hm-cta-txt:			var(--dark-grey-2);
+  --hm-cta1-txt:		var(--dark-grey-2);
+  --hm-cta2-txt:		var(--dark-grey-2);
+  --hm-cta3-txt:		var(--dark-grey-2);
+  --hm-cta-hv-txt:		var(--white-color);
+  --mhighlt-arrow-bkg:		var(--brilliant-cornflower);
+  --mhighlt-publ-bkg:		var(--brilliant-cornflower);
+  --mactn-blkgrid-bkg:		var(--dark-azure-2-90);
+  --mactn-blkgrid-bkg-hv:	var(--brilliant-cornflower);
+  --nav-bkg:			var(--dark-azure-2-90);
+  --nav-bkg-hv:			var(--dark-azure);
+  --nav2-bkg:			var(--dark-azure-2);
+  --navp-bkg:			var(--dark-azure);
+  --pgr-lnk-bkg:		var(--light-cornflower-grey);
+  --pgr-lnk-hgl:		var(--white-color);
+  --pgr-lnk-bkg-hgl:		var(--brilliant-cornflower-2);	/* was brilliant-cornflower */
+  --pgr-lnk-hv:			var(--dark-grey-2);
+  --pgr-lnk-bkg-hv:		var(--vivid-yellow);
+  --snav-scr-bkg:		var(--dark-azure-3);
+  --snav-lnk-hgl:		var(--dark-grey-2);
+  --snav3-lnk:			var(--light-cornflower-grey);
+  --srch-txt-box:		var(--light-cornflower-grey-4);
+  --srch-btn-txt:		var(--white-color);
+  --srch-btn-bkg:		var(--brilliant-cornflower-2);	/* was brilliant-cornflower */
+  --ssb-menu-bkg:		var(--dark-azure-2);
+  --ssb-menu-lnk:		var(--brilliant-cornflower);
+  --ssb-menu-lnk-hv:		var(--vivid-yellow);
+  --txt:			var(--dark-grey-2);
+}
+
+@media (max-width: 1150px) { :root { --gap: var(--md-gap); } }
+@media (max-width: 767px) { :root { --gap: var(--sm-gap); } }
+@media (max-width: 500px) { :root { --gap: var(--xs-gap); } }
+
+
+
+/* Changing some Bootstrap settings here */
+
+body {
+  background-color: var(--white-color);
+  font-family: var(--regular-font), Arial, sans-serif !important;
+  font-size: var(--body-FS);
+  line-height: 1.8; }
+
+html {
+  font-family: var(--regular-font), Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.8; }
+
+@media (max-width: 500px) {
+  body,
+  html {
+    line-height: 1.4; } }
+
+
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-family: var(--bold-font), Arial, sans-serif !important;
+  font-weight: normal; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4; }
+
+h1, .h1 {
+  font-size: var(--h1-FS); }
+
+h2, .h2 {
+  font-size: var(--h2-FS); }
+
+h3, .h3 {
+  font-size: var(--h3-FS); }
+
+h4, .h4 {
+  font-size: var(--h4-FS); }
+
+h5, .h5 {
+  font-size: var(--h5-FS); }
+
+h6, .h6 {
+  font-size: var(--h6-FS); }
+
+a {
+  color: var(--lnk);
+  text-decoration: none;
+  transition: color 0.2s ease 0s; }
+
+a:hover, a:focus {
+  text-decoration: none; }
+
+
+html, button, input, select, textarea {
+  color: var(--txt); }
+
+
+input {
+  line-height: normal; }
+
+button {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  cursor:pointer; }
+
+.btn {
+  vertical-align: bottom; }
+
+.footer {
+  border-top: none;
+  margin: 0;
+  padding: 0; }
+
+/*
+.navbar-nav > li > a {
+  line-height: 1.8;
+}
+*/
+
+
+/* Change Bootstrap padding to mimic Error Agency's */
+/*
+.row {
+  margin-left: -50px;
+  margin-right: -50px; }
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 50px;
+    padding-right: 50px; }
+  @media (max-width: 1150px) {
+    .row {
+      margin-left: -20px;
+      margin-right: -20px; }
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 20px;
+    padding-right: 20px; } }
+  @media (max-width: 767px) {
+    .row {
+      margin-left: calc((339.2px - 100vw) * 25 / 536);
+      margin-right: calc((339.2px - 100vw) * 25 / 536); }
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+      padding-left: calc((100vw - 339.2px) * 25 / 536);
+      padding-right: calc((100vw - 339.2px) * 25 / 536); } }
+  @media (max-width: 500px) {
+    .row {
+      margin-left: -7.5px;
+      margin-right: -7.5px; }
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+      padding-left: 7.5px;
+      padding-right: 7.5px; } }
+*/

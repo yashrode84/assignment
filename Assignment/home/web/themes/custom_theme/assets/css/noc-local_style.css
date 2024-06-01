@@ -1,0 +1,351 @@
+/* noc-local_style.css */
+
+
+/* Modified NOC theme 2023  */
+/* ======================== */
+
+:root {
+  --hero-gap: 55px;
+  --logo-offset: 39px;
+  --logo-sq-sz: 126px;
+  --footer-pad-top: 100px;
+}
+
+@media (max-width: 1150px) {
+  :root {
+    --footer-pad-top: 60px; } }
+@media (max-width: 767px) {
+  :root {
+    --footer-pad-top: 40px; } }
+
+
+/* HEADER AREA */
+
+/* Add margin to top of hero area to accommodate logo offset */
+.l-site-wrapper {
+  padding-top: var(--hero-gap); }
+
+/* Remove previous background and padding around logo */
+.m-logo {
+  background: none;
+  padding: 0; }
+
+/* Make new NOC logo same size and shift upwards (design by Giant Agency) */
+.m-logo img {
+  margin-top: min(var(--logo-offset), -1*var(--logo-offset));
+  height: var(--logo-sq-sz);
+  width: var(--logo-sq-sz); }
+
+/* Menu styles */
+.m-secondary-navigation {
+  top: min(var(--hero-gap), -1*var(--hero-gap)); }
+
+
+/* FOOTER AREA */
+
+/* Override bottom margin, ensure enough space for new logo at small screen width */
+@media (max-width: 500px) {
+  #main {
+    margin-bottom: 80px; } }
+
+/* Make footer NOC logo same size as logo in hero area */
+.m-site-footer .logo img {
+  margin: 0;
+  height: var(--logo-sq-sz);
+  width: var(--logo-sq-sz); }
+
+.m-site-footer .logo a#noc-logo {
+  position: absolute;
+  top: min(var(--logo-offset), -1*(var(--logo-offset)));
+  z-index: 100; }
+
+/* Needs extra padding sometimes?!! Some authenticated users to have this style set */
+body[style^="padding-top: 6"] .m-site-footer .logo a#noc-logo,
+body[style^="padding-top: 8"] .m-site-footer .logo a#noc-logo,
+body[style^="padding-top: 10"] .m-site-footer .logo a#noc-logo {
+  top: min(var(--footer-pad-top) + var(--logo-offset), -1*(var(--footer-pad-top) + var(--logo-offset))); }
+
+.m-site-footer {
+  display: grid; /* Needed for background colour fill to reach bottom of page (on GSNOCS and careers.noc.ac.uk/vacancies.html) */
+  overflow: visible; }
+
+/* Add top margin to logo text */
+.m-site-footer .logo p:first-of-type {
+  margin-top: calc(126px - var(--footer-pad-top)); }
+
+.m-site-footer .logo a:hover,
+.m-site-footer .social-networks li a:hover {
+  opacity: 1.0; } /* don't fade on hover... was 0.7 */
+
+.m-site-footer .email-signup h2 img {
+  margin-left: 0; }
+
+/* Small print */
+.m-site-footer .secondary-footer .legal p {
+  opacity: 1.0; }
+
+.m-site-footer .secondary-footer .legal .navigation li a {
+  opacity: 0.6; }
+
+
+
+/* Modify local colours in NOC theme 2023 */
+/* -------------------------------------- */
+
+
+:root {
+						/*   C      M      Y      K    */
+  --white:			#fff;		/*   0      0      0      0    */
+  --pale-cerulean:		#ccf0ff;	/*  20      5.88   0      0    */
+  --vivid-cerulean:		#00b5ff;	/* 100     29.02   0      0    */
+  --white-col:			#fdfdfd;	/*   0      0      0      1.96 */
+  --brilliant-cerulean:		#15b5ea;	/*  91.03  22.65   0      8.24 */
+  --cornflower-blue:		#368ecd;	/*  73.66  30.73   0     19.61 */
+  --cornflower-blue-2:		#247db3;	/*  80     30      0     30    */
+  --cornflower-blue-3:		#106b99;	/*  89.54  30.07   0     40    */
+  --strong-gold:		#ccbb00;	/*   0      8.33 100     20    */
+/* --black-col: var(--dark-grey-2); */
+  --black-col:			#010101;	/*   0      0      0     99.61 */
+
+  --pale-cerulean-95:		rgba(204,240,255,0.95);
+  --pale-cerulean-90:		rgba(204,240,255,0.9);
+  --vivid-cerulean-97:		rgba(0,181,255,0.97);
+  --vivid-cerulean-95:		rgba(0,181,255,0.95);
+  --vivid-cerulean-90:		rgba(0,181,255,0.9);
+  --cornflower-blue-90:		rgba(54,142,205,0.9);
+
+/* variables in application.css (not indented), other variables (indented) */
+  --foot-bkg: var(--pale-cerulean);
+  --foot-txt: var(--black-col);
+  --foot-lnk: var(--cornflower-blue-2);
+  --foot-lnk-hv: var(--strong-gold);
+  --foot-lgl-txt: var(--black-col);
+  --hero-lnk-btn-bkg-hv: var(--cornflower-blue);
+  --lnk-btn-bkg: var(--vivid-cerulean);
+  --lnk-btn-bkg-hv: var(--cornflower-blue);
+  --lnk-btn-txt: var(--black-col);
+      --lnk-btn-txt-hv: var(--white-col);
+  --hl-txt-bkg: var(--pale-cerulean-90);
+  --hl-txt-bkg-hv: var(--pale-cerulean-95);
+      --hl-txt: var(--black-col);
+      --hl-txt-arw-bg: var(--vivid-cerulean);
+  --hm-cta-txt: var(--black-col);
+  --hm-cta1-bkg: var(--white-col);
+  --hm-cta2-bkg: var(--white-col);
+  --hm-cta3-bkg: var(--white-col);
+  --hm-cta-bkg-hv: var(--vivid-cerulean);
+  --mhighlt-publ-bkg: var(--pale-cerulean);
+      --mhighlt-publ-bkg-hv: var(--vivid-cerulean);
+      --mhighlt-publ-txt: var(--black-col);
+      --mactn-blkgrid-txt: var(--black-col);
+      --mactn-blkgrid-txt-hv: var(--white-col);
+  --mactn-blkgrid-bkg: var(--vivid-cerulean-95);
+  --mactn-blkgrid-bkg-hv: var(--cornflower-blue);
+      --nav-txt: var(--black-col);
+      --nav-txt-hv: var(--white-col);
+  --nav-bkg: var(--vivid-cerulean-95);
+  --nav-bkg-hv: var(--vivid-cerulean);		/* was --vivid-cerulean to --cornflower-blue */
+  --nav2-bkg: var(--vivid-cerulean);
+      --nav3-bkg: var(--vivid-cerulean-97);
+  --navp-bkg: var(--vivid-cerulean);		/* was --vivid-cerulean to --cornflower-blue */
+      --nav-else-txt: var(--dark-grey);		/* was --dark-grey to dark-grey-2 */
+      --secnav-txt: var(--black-col);
+      --secnav-bkg: var(--white);
+      --secnav-txt-hv: var(--black-col);
+      --subnav-txt: var(--black-col);
+      --subnav-txt-hv: var(--white-col);
+      --subnav-scr-more-bkg: var(--cornflower-blue-90);
+      --news-hl-txt-bkg: var(--pale-cerulean); 
+      --news-hl-txt: var(--black-col);
+      --news-hl-meta-txt: var(--black-col);
+      --news-hl-txt-arw-bg: var(--vivid-cerulean);
+      --bkg-img-bdr: var(--vivid-cerulean);
+      --bkg-img-btn: var(--vivid-cerulean);
+      --bkg-btn-txt: var(--black-col);
+      --bkg-img-btn-hv: var(--cornflower-blue);
+      --bkg-img-btn-txt-hv: var(--white-col);
+  --snav3-lnk: var(--white-col);
+  --snav3-mlnk: var(--black-col);
+  --snav3-mlnk-hv: var(--white-col);
+}
+
+
+/* HEADER AREA */
+
+/* Change 'Back to top' button */
+.m-fixed-bar .back-to-top button {
+  background: url('../img/icon-back-to-top-dark.svg') no-repeat; }
+
+/* Title (landing page) */
+.m-landing-hero .title-content h1 {
+  color: var(--pale-cerulean); }
+
+/* Menu styles */
+.m-mega-nav a,
+.m-mega-nav > ul a {
+  color: var(--nav-txt); }
+
+.m-mega-nav .area a:hover,
+.m-mega-nav > ul a:hover,
+.m-mega-nav > ul li.is-hovered a {
+  color: var(--nav-txt-hv); }
+
+.m-mega-nav .area--display-standard > ul > li > ul > li > ul > li a {
+  color: var(--nav-txt); }
+
+.m-mega-nav .area--display-standard > ul > li > ul > li > ul > li a::before {
+  background: var(--nav-txt); }
+
+.m-mega-nav .area li.elsewhere span,
+.m-mega-nav .area li.elsewhere a:not(:hover) {
+  color: var(--nav-else-txt) !important; /* need !important to override application.css */ }
+
+.m-secondary-navigation {
+  background-color: var(--secnav-bkg); } /* add background colour (shifted from hero area with dark background) */
+
+.m-secondary-navigation::before {
+  display: none; } /* hide blurred overlay */
+
+.m-secondary-navigation ul.menu.nav {
+  padding-bottom: 10px; }
+
+.m-secondary-navigation .menu.nav li a {
+  color: var(--secnav-txt);
+  text-shadow: none; }
+
+/* .m-secondary-navigation .menu.nav li a:not([title^="Donate"]):hover { */
+.m-secondary-navigation .menu.nav li a:hover {
+  border-bottom: 2px solid var(--grey);
+  color: var(--secnav-txt-hv); }
+
+.m-secondary-navigation .menu.nav li.donate-button { /* .donate-button class added by jQuery to <li> item containing 'Donate' */
+  background-color: var(--vivid-yellow); /* was #ff82ff */
+  margin: -5px 0 -5px calc(20px - 9px); /* Compensate for added padding */
+  padding: 5px 9px; }
+
+/*
+.secondary-navigation .menu.nav li.donate-button {
+  background-color: var(--navp-bkg); }
+*/
+
+/* Main links in 'This Section' */
+.m-subnavigation header span {
+  font-family: var(--bold-font); }
+.m-subnavigation a {
+  color: var(--subnav-txt); }
+
+.m-subnavigation a:hover {
+  color: var(--subnav-txt-hv);
+  opacity: 1.0; }
+
+.m-subnavigation > div.is-scrollable::after,
+.m-subnavigation > ul.is-scrollable::after {
+  background-color: var(--subnav-scr-more-bkg); }
+
+.m-subnavigation [data-simplebar] li > ul a {
+  color: var(--snav3-mlnk); }
+
+.m-subnavigation [data-simplebar] li > ul a:hover {
+  color: var(--snav3-mlnk-hv); }
+
+.m-subnavigation [data-simplebar] .current > a:hover {
+  color: var(--snav3-mlnk) ; }
+
+.m-subnavigation > ul ul ul a::before,
+.m-subnavigation div > ul ul ul a::before {
+  background-color: var(--snav3-mlnk); }
+
+.m-subnavigation.is-open {
+  background-color: var(--nav3-bkg); }
+
+/* Hero button hover text */
+.m-home-hero .button:hover {
+  color: var(--lnk-btn-txt-hv); }
+
+
+/* MODULE COMPONENTS */
+
+/* Button link text on hover */
+.m-side-image a:hover {
+  color: var(--lnk-btn-txt-hv); }
+
+/* Block grid panel text */
+.m-action-block-grid > ul li a .text-content {
+  color: var(--mactn-blkgrid-txt); }
+
+.m-action-block-grid > ul li a:hover .text-content {
+  color: var(--mactn-blkgrid-txt-hv); }
+
+/* News overview highlight */
+.m-news-overview .highlight .text-content {
+  background: var(--news-hl-txt-bkg);
+  color: var(--news-hl-txt); }
+
+.m-news-overview .meta {
+  color: var(--news-hl-meta-txt); }
+
+.m-news-overview .highlight .text-content::after {
+  background-color: var(--news-hl-txt-arw-bg); }
+
+/* Background image panel */
+.m-background-image--outline .text-content {
+  border-color: var(--bkg-img-bdr); }
+
+.m-background-image a {
+  background: var(--bkg-img-btn);
+  color: var(--bkg-btn-txt); }
+
+.m-background-image a:hover {
+  background: var(--bkg-img-btn-hv);
+  color: var(--bkg-img-btn-txt-hv); }
+
+/* Highlight panel */
+.m-highlight .text-content {
+    background: var(--hl-txt-bkg);
+    color: var(--hl-txt); }
+
+.m-highlight .text-content::after {
+   background-color: var(--hl-txt-arw-bg); }
+
+.m-highlight .text-content h1,
+.m-highlight .text-content h2,
+.m-highlight a:hover .text-content > * {
+  color: var(--hl-txt); }
+
+/* Publications */
+.m-highlighted-publications ul.item-list a,
+.m-highlighted-publications > ul a {
+  background: var(--mhighlt-publ-bkg);
+  color: var(--mhighlt-publ-txt); }
+
+.m-highlighted-publications ul.item-list a:hover,
+.m-highlighted-publications > ul a:hover {
+  background: var(--mhighlt-publ-bkg-hv); }
+
+/* News and events - tag background */
+.m-news-overview .highlight .meta li.tag {
+  background: rgba(0, 128, 255, 0.1); }
+
+
+/* FOOTER AREA */
+
+/* Footer background and text colours */
+.m-site-footer .footer-navigation a:hover,
+.m-site-footer .email-signup a:hover {
+  color: var(--lnk-btn-txt-hv); }
+
+.logo a {
+  color: var(--cornflower-blue-3); }
+
+/* Horizontal line colour */
+.m-site-footer .primary-footer + .secondary-footer {
+  border-top: 2px solid rgba(0, 128, 255, 0.08);
+}
+
+/* Fundraising Regulator logo fix (affects small screen size) */
+.m-site-footer .secondary-footer .partners .fr img {
+  width: 245px;
+  height: 75px; }
+
+
+/* End of modified NOC theme 2023  */

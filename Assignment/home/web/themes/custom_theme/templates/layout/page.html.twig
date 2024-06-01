@@ -1,0 +1,779 @@
+{#
+/**
+ * @file
+ * Olivero's theme implementation to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template normally located in the
+ * core/modules/system directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.header: Items for the header region.
+ * - page.highlighted: Items for the highlighted region.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar: Items for the first sidebar.
+ * - page.featured_bottom_first: Items for the first featured bottom region.
+ * - page.featured_bottom_second: Items for the second featured bottom region.
+ * - page.footer_first: Items for the first footer column.
+ * - page.footer_second: Items for the second footer column.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ * - page.social: Items for the social region.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "G-GP0ZM2V3V9", {"groups":"default","anonymize_ip":true});gtag("config", "UA-167801473-1", {"groups":"default","anonymize_ip":true});</script>
+<script src="https://noc.ac.uk/files/js/js_lK2fTMbvCIAuvF5Mx6Fs-RiIj41D_EpdSQTluL1ZXIc.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"noc7x_main","theme_token":"e-b52rmTLnciQb4FYhWDI7Ma5VK4k6IY5RCVE5wlcwk","js":{"0":1,"sites\/all\/modules\/eu_cookie_compliance\/js\/eu_cookie_compliance.min.js":1,"sites\/all\/themes\/bootstrap\/js\/bootstrap.js":1,"https:\/\/noc.ac.uk\/files\/google_tag\/noc_ac_uk\/google_tag.script.js":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/3.6\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/js\/jquery_browser.js":1,"sites\/all\/modules\/eu_cookie_compliance\/js\/jquery.cookie-1.4.1.min.js":1,"misc\/form-single-submit.js":1,"sites\/all\/modules\/lightbox2\/js\/lightbox.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"https:\/\/noc.ac.uk\/files\/googleanalytics\/js?seatan":1,"1":1,"sites\/all\/themes\/NOC7X-main\/..\/..\/libraries\/bootstrap\/js\/bootstrap.min.js":1,"sites\/all\/themes\/NOC7X-main\/noc_responsive.min.js":1,"sites\/all\/themes\/NOC7X-main\/js\/vendor\/modernizr.min.js":1,"sites\/all\/themes\/NOC7X-main\/js\/vendor\/jquery.waypoints.min.js":1,"sites\/all\/themes\/NOC7X-main\/js\/vendor\/jquery.sticky-kit.min.js":1,"sites\/all\/themes\/NOC7X-main\/js\/vendor\/responsiveslides.min.js":1,"sites\/all\/themes\/NOC7X-main\/js\/vendor\/photoswipe.min.js":1,"sites\/all\/themes\/NOC7X-main\/js\/vendor\/photoswipe-ui-default.min.js":1,"sites\/all\/themes\/NOC7X-main\/js\/vendor\/simplebar.min.js":1,"sites\/all\/themes\/NOC7X-main\/js\/namespace.js":1,"sites\/all\/themes\/NOC7X-main\/js\/modules\/mobile_navigation.js":1,"sites\/all\/themes\/NOC7X-main\/js\/modules\/search_popover.js":1,"sites\/all\/themes\/NOC7X-main\/js\/modules\/visual_helpers.js":1,"sites\/all\/themes\/NOC7X-main\/js\/modules\/image_galleries.js":1,"sites\/all\/themes\/NOC7X-main\/js\/modules\/staff_directory.js":1,"sites\/all\/themes\/NOC7X-main\/js\/application.js":1,"sites\/all\/themes\/NOC7X-main\/..\/..\/libraries\/lazysizes\/js\/lazysizes.min.js":1,"sites\/all\/themes\/NOC7X-main\/..\/..\/libraries\/lazysizes\/js\/ls.unveilhooks.min.js":1,"sites\/all\/themes\/NOC7X-main\/noc-local_responsive.js":1,"sites\/all\/modules\/jquery_update\/js\/jquery_position.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/calendar\/css\/calendar_multiday.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/lightbox2\/css\/lightbox.css":1,"sites\/all\/modules\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"public:\/\/ctools\/css\/d96ea5a86542ac56f448ea8ecb948b25.css":1,"sites\/all\/themes\/NOC7X-main\/..\/..\/libraries\/bootstrap\/css\/bootstrap.min.css":1,"sites\/all\/themes\/NOC7X-main\/..\/bootstrap\/css\/overrides.css":1,"sites\/all\/themes\/NOC7X-main\/css\/fonts.min.css":1,"sites\/all\/themes\/NOC7X-main\/css\/pre-appl.css":1,"sites\/all\/themes\/NOC7X-main\/css\/application.min.css":1,"sites\/all\/themes\/NOC7X-main\/css\/simplebar.css":1,"sites\/all\/themes\/NOC7X-main\/css\/photoswipe\/photoswipe.css":1,"sites\/all\/themes\/NOC7X-main\/css\/photoswipe\/default-skin.css":1,"sites\/all\/themes\/NOC7X-main\/css\/style.min.css":1,"sites\/all\/themes\/NOC7X-main\/..\/..\/..\/..\/modules\/node\/node.css":1,"sites\/all\/themes\/NOC7X-main\/css\/noc-local_style.css":1}},"lightbox2":{"rtl":0,"file_path":"\/(\\w\\w\/)public:\/","default_image":"\/sites\/all\/modules\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":true,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":false,"disable_resize":false,"disable_zoom":false,"force_show_nav":false,"show_caption":true,"loop_items":false,"node_link_text":"View Image Details","node_link_target":false,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":1,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":600,"iframe_height":400,"iframe_border":1,"enable_video":false,"useragent":"Mozilla\/5.0 (Windows NT 6.1; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/34.0.1847.137 Safari\/537.36"},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":0,"popup_clicking_confirmation":1,"popup_scrolling_confirmation":0,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies to aid user experience\u003C\/h2\u003E\n\u003Cp\u003EContinuing to use this site means you agree to the\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003Ecookies policy\u003C\/button\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK to cookies\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies to assist user experience\u003C\/h2\u003E\n\u003Cp\u003EContinuing to use this site means you agree to cookies.\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003Ecookies policy\u003C\/button\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK to cookies\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","mobile_breakpoint":"768","popup_html_agreed":"\u003Cdiv\u003E\n  \u003Cdiv class=\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThank you for accepting cookies\u003C\/h2\u003E\n\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button eu-cookie-compliance-hide-button\u0022\u003EHide\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button-thank-you\u0022 \u003EMore info\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/about-us\/privacy-notice","popup_link_new_window":0,"popup_position":null,"fixed_top_position":1,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":0,"reload_page":0,"domain":"","domain_all_sites":0,"popup_eu_only_js":0,"cookie_lifetime":"100","cookie_session":false,"disagree_do_not_show_popup":0,"method":"default","allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","withdraw_enabled":false,"withdraw_button_on_info_popup":0,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":1,"cookie_name":"","cookie_value_disagreed":"0","cookie_value_agreed_show_thank_you":"1","cookie_value_agreed":"2","containing_element":"body","automatic_cookies_removal":1,"close_button_action":"close_banner"},"googleanalytics":{"account":["G-GP0ZM2V3V9","UA-167801473-1"],"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"urlIsAjaxTrusted":{"\/":true},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"popoverEnabled":1,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-45455 node-type-page" >
+    <div class="region region-page-top">
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7SQSMX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  </div>
+      <div class="l-site-wrapper ovrflw-vis">
+      <div class="m-hamburger"><button class="hamburger" title="Open / Close Menu"><span class="hamburger-box"><span class="hamburger-inner"><span class="element-invisible">Open or Close Menu</span></span></span></button></div>
+        <div id="landing" class="m-site-header m-site-header--landing">
+          <div class="m-logo">
+            <a href="/"><img alt="Site logo" src="\sites\default\files\logo_site.png" width="250" height="85" /><span>Home page</span></a>
+          </div>
+          
+          <div class="m-mega-nav main-nav">
+            <ul class="site-navigation">
+              <li><a href="/science" data-area="science">Science</a></li>
+              <li><a href="/technology" data-area="technology">Technology</a></li>
+              <li><a href="/under-the-surface" data-area="discover">Under the Surface</a></li>
+              <li><a href="/facilities" data-area="facilities">Facilities</a></li>
+              <li><a href="/education" data-area="education">Education</a></li>
+              <li><a href="/about-us" data-area="about">About</a></li>
+              <li><a href="/careers" data-area="careers">Careers</a></li>
+              <li class="main-nav-search-link"><a href="#" title="Search"><i class="fa fa-search" aria-hidden="true"><span class="element-invisible">Search</span></i></a></li>
+            </ul>
+            <div class="area area--science area--display-standard">
+              <ul>
+                <li><a href="/science/big-science-big-challenges">Big Science for Big Challenges</a></li>
+                <li><a href="/science/research-expeditions">Research Expeditions</a></li>
+                <li><a href="/science/sustained-observations">Sustained Observations</a></li>
+                <li><a href="/science/research-areas">Our Science Research Areas</a>
+                  <ul>
+                    <li><a href="/science/research-areas/marine-physics-ocean-climate">Marine Physics and Ocean Climate</a></li>
+                    <li><a href="/science/research-areas/marine-systems-modelling">Marine Systems Modelling</a></li>
+                    <li><a href="/science/research-areas/ocean-biogeosciences">Ocean BioGeosciences</a></li>
+                    <li><a href="/science/research-areas/ocean-technology-engineering">Ocean Technology and Engineering</a></li>
+                  </ul>
+                </li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/publications">Publications</a></li>
+              </ul>
+            </div>
+            <div class="area area--technology area--display-standard">
+              <ul>
+                <li><a href="/technology/technology-development">Technology Development</a>
+                  <ul>
+                    <li><a href="/technology/technology-development/autonomous-vehicles">Autonomous Vehicles</a></li>
+                    <li><a href="/technology/technology-development/electronics-software-communications">Electronics, Software and Communcations</a></li>
+                    <li><a href="/technology/technology-development/instruments-sensors">Instruments and Sensors</a></li>
+                    <li><a href="/technology/technology-development/marine-autonomous-robotic-systems">Marine Autonomous and Robotic Systems</a></li>
+                    <li><a href="/technology/technology-development/mechanical-engineering">Mechanical Engineering</a></li>
+                  </ul>
+                </li>
+                <li><a href="/technology/technology-archive">Technology Archive</a>
+                  <ul>
+                    <li><a href="/technology/technology-archive/autosub-development">Autosub Development</a></li>
+                    <li><a href="/technology/technology-archive/unmanned-surface-vehicle-development">Long Endurance Marine USVs</a></li>
+                    <li><a href="/technology/technology-archive/deep-ocean-lander-development">Deep Ocean Landers</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="area area--discover area--display-standard">
+              <ul>
+                <li><a href="/under-the-surface/marine-geohazards">Marine Geohazards</a>
+                <li><a href="/under-the-surface/marine-heatwaves">Marine Heatwaves</a>
+                <li><a href="/under-the-surface/seagrass">Seagrass</a>
+                <li><a href="/under-the-surface/twilight-zone">In the Twilight Zone</a>
+                <li><a href="/under-the-surface/ocean-plastics">Plastics in the Ocean</a>
+                <li><a href="/under-the-surface/monsters-deep">Monsters of the Deep</a>
+                <li><a href="/under-the-surface/actions-ocean-decade">Actions for the Ocean Decade</a>
+              </ul>
+            </div>
+            <div class="area area--facilities area--display-standard">
+              <ul>
+                <li><a href="/facilities/data-research-facilities">Data and Research Facilities</a>
+                  <ul>
+                    <li><a href="/facilities/discovery-collections">Discovery Collections</a></li>
+                  </ul>
+                </li>
+                <li><a href="/facilities/ships">Research Ships</a>
+                  <ul>
+                    <li><a href="/facilities/ships/rrs-discovery">RRS Discovery</a></li>
+                    <li><a href="/facilities/ships/rrs-james-cook">RRS James Cook</a></li>
+                    <li><a href="/facilities/ships/net-zero-oceanographic-capability">Net Zero Oceanographic Capability</a></li>
+                  </ul>
+                </li>
+                <li><a href="/facilities/national-marine-equipment-pool">National Marine Equipment Pool</a></li>
+                <li><a href="/facilities/coastal-shelf-seas-instrumentation-services">Coastal and Shelf Seas Instrumentation Services</a></li>
+                <li><a href="/facilities/laboratories-workshops-testing-facilities">Laboratories, Workshops and Testing Facilities</a></li>
+                <li><a href="/facilities/national-oceanographic-library">National Oceanographic Library</a>
+                  <ul>
+                    <li><a href="/facilities/national-oceanographic-library/archives-special-collections">Archives and Special Collections</a></li>
+                    <li><a href="/facilities/national-oceanographic-library/noc-research-publications">NOC Research Publications</a></li>
+                    <li><a href="/facilities/national-oceanographic-library/open-access-information-data-resources">Open Access Information and Data Resources</a></li>
+                  </ul>
+                </li>
+                <li><a href="/facilities/conference-facilities">Hosting Events at NOC Southampton</a></li>
+              </ul>
+            </div>
+            <div class="area area--education area--display-standard">
+              <ul>
+                <li><a href="/education/postgraduate-studies">Postgraduate Studies</a>
+                  <ul>
+                    <li><a href="/education/doctoral-training-partnerships">Doctoral Training Partnerships</a></li>
+                    <li><a href="/education/graduate-school-noc-southampton">Graduate School, NOC Southampton</a></li>
+                    <li><a href="/education/gsnocs/phd-projects">GSNOCS Postgraduate Projects</a></li>
+                    <li><a href="/education/phd-opportunities-noc-liverpool">PhD Opportunities at NOC Liverpool</a></li>
+                  </ul>
+                </li>
+                <li><a href="/education/undergraduate-studies">Undergraduate Studies</a>
+                </li>
+                <li><a href="/education/educational-resources">Educational Resources</a>
+                  <ul>
+                    <li><a href="/education/educational-resources/into-the-blue-podcast">Into the Blue Podcast</a></li>
+                    <li><a href="/education/educational-resources/online-learning">Online Learning</a></li>
+                    <li><a href="/education/educational-resources/changing-shores-crosby">Coastal Walk</a></li>
+                    <li><a href="/education/educational-resources/visits-talks">Visits and Talks</a></li>
+                  </ul>
+                </li>
+                <li><a href="/education/boaty-mcboatface">Boaty McBoatface</a></li>
+              </ul>
+            </div>
+            <div class="area area--about area--display-standard">
+              <ul>
+                <li><a data-href="our-organisation">Our Organisation</a>
+                  <ul>
+                    <li><a href="/about-us/vision-mission-goals-values">Vision, Mission, Goals and Values</a></li>
+                    <li><a href="/about-us/public-benefit">Public Benefit</a></li>
+                    <li><a href="/about-us/leadership">Leadership and Governance</a></li>
+                    <li><a href="/about-us/literature-brochures">Literature and Brochures</a></li>
+                    <li><a href="/about-us/our-commitments">Our Commitments</a></li>
+                    <li><a href="/about-us/our-history">Our History and Heritage</a></li>
+                    <li><a href="/about-us/our-ambassadors">Our Ambassadors</a></li>
+                    <li><a href="/about-us/learned-professional-societies">Learned and Professional Societies</a></li>
+                  </ul>
+                </li>
+                <li><a href="/partnerships">Partnerships</a>
+                  <ul>
+                    <li><a href="/partnerships/our-national-role">Our National Role</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li><a href="/partnerships/our-international-role">Our International Role</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="/about-us/contact-us">Contact Us</a>
+                  <ul>
+                    <li><a href="/about-us/staff-directory">Staff Directory</a></li>
+                    <li><a href="/contact">Contact Form</a></li>
+                    <li><a href="/about-us/contact-us/complaints">Complaints</a></li>
+                  </ul>
+                </li>
+               <li><a href="/about-us/support-us">Support Us</a>
+                  <ul>
+                    <li><a href="/about-us/support-us/one-ocean">One Ocean</a></li>
+                    <li><a href="/about-us/support-us/ocean-education">Ocean Education</a></li>
+                  </ul>
+               </li>
+               <li><a href="/about-us/supplying-noc">Supply Us</a>
+                  <ul>
+                    <li><a href="/about-us/supplying-noc/supplying-us">Supplying to Us</a></li>
+                    <li><a href="/about-us/supplying-noc/sustainable-procurement">Sustainable Procurement</a></li>
+                  </ul>
+                </li>
+               <li><a href="/news">Latest News</a>
+                  <ul>
+                    <li><a href="/news/news-archive">News Archive</a></li>
+                  </ul>
+               </li>
+              </ul>
+            </div>
+            <div class="area area--careers area--display-standard">
+              <ul>
+                <li><a href="https://careers.noc.ac.uk/vacancies.html">Current Vacancies</a>
+                </li>
+                <li><a href="/careers/working-noc">Working for NOC</a>
+                </li>
+                <li><a href="/careers/noc-recruitment-faqs">Recruitment FAQs</a></li>
+                  <li><a href="/careers/women-noc">Women in NOC</a></li>
+                  <li><a href="/careers/women-engineering">Women in Engineering</a></li>
+                  <li><a href="/careers/new-starter-portal">New Starter Portal</a></li>
+            
+              </ul>
+            </div>          </div>
+                    </div>
+                    <div class="m-search-popover is-hidden">
+                      <div class="back"></div>
+                      <div class="inner">
+                        <div class="inner-inner">
+            <form class="form-search content-search" action="/" method="post" id="search-block-form--2" accept-charset="UTF-8"><div><div>
+                  <p class="element-invisible"><strong>Search form</strong></p>
+                <div class="input-group"><input title="Enter the terms you wish to search for." placeholder="Search" class="form-control form-text form-search" type="search" id="edit-search-block-form--4" name="search_block_form" value="" size="15" maxlength="128" /><span class="input-group-btn"><button type="submit" class="btn btn-default"><i class="fa fa-search fa-lg" aria-hidden="true"><span class="element-invisible">Search</span></i></button></span></div><button class="element-invisible btn btn-primary form-submit" id="edit-submit--2" name="op" value="Search" type="submit">Search</button>
+            <input type="hidden" name="form_build_id" value="form-VNtJ14S3Kb6x11XbGu8YbkiCijfEnsmBWKpuRyVWLvk" />
+            <input type="hidden" name="form_id" value="search_block_form" />
+            </div>
+            </div></form>            </div>
+                      </div>
+                    </div>
+                    <div class="m-fixed-bar">
+                      <div class="wrap">
+                        <div class="m-mega-nav"></div>
+                        <div class="back-to-top"><button title="Back to top"><span>Back to top</span></button></div>
+                      </div>
+                    </div>
+        <div class="m-fixed-bar">
+          <div class="wrap">
+            <div class="m-mega-nav"></div>
+            <div class="back-to-top"><button title="Back to top"><span>Back to top</span></button></div>
+          </div>
+        </div>
+        
+        <div id="hero" class="m-index-hero">
+          <div class="image"></div>
+          <div class="m-secondary-navigation">
+  <div class="region region-nav-second">
+    <section id="block-menu-menu-secondary-nav-bar-menu" class="block block-menu clearfix">
+  <ul class="menu nav"><li class="first leaf"><a href="/about-us/staff-directory" title="">People</a></li>
+<li class="leaf"><a href="/media" title="">Media Centre</a></li>
+<li class="leaf"><a href="https://noc-innovations.com" title="Visit the NOC Innovations website">NOC Innovations</a></li>
+<li class="leaf"><a href="/about-us/support-us" title="Support the NOC with a gift">Support Us</a></li>
+<li class="last leaf"><a href="https://donate.noc.ac.uk/donate" title="Make a single or regular donation">Donate</a></li>
+</ul>
+</section> <!-- /.block -->
+  </div>
+          </div>
+<style>.vidctrl{position:absolute;top:3px;right:-8px;opacity:0.48;z-index:1100;}.m-secondary-navigation~.vidctrl{top:15px; /* 45px */}.vidctrl:focus,.vidctrl:hover{opacity:0.96;}.vidctrl a{color:var(--grey89);display:inline-block;margin:8px;outline:0;text-shadow:1px 1px 2px var(--grey60);}@media(max-width:1150px){.vidctrl.vidctrl{right:60px;top:3px;}}@media(max-width:767px){.vidctrl.vidctrl{right:40px;top:0;}.vidctrl.vidctrl{font-size:0.666em;}.videocontrol a{margin:5px;}}@media(max-width:500px){.vidctrl.vidctrl{right:30px;}}</style>
+
+<div class="m-home-hero-video">
+	<video id="vid" autoplay loop muted playsinline><!-- preload -->
+		<source src="\sites\default\files\2024-06\Here at NOC, We Go Deeper.mp4" type="video/mp4; codecs=&quot;avc1.4D401E, mp4a.40.2&quot;" />
+	</video>
+</div>
+<div class="vidctrl">
+	<a href="#" onClick="javascript:vid.play();document.cookie='pauseFPvid=;max-age=-1;path=/;';return(false);" title="Play video"><i class="fa fa-play-circle fa-3x"><span class="element-invisible">play</span></i></a><span class="element-invisible"> | </span><a href="#" onClick="javascript:vid.pause();document.cookie='pauseFPvid=true;expires='+expires+';path=/;';return(false);" title="Pause video"><i class="fa fa-pause-circle fa-3x"><span class="element-invisible">pause</span></i></a>
+</div>
+
+<div class="text-content">
+	<h1>We make sense of the changing seas, on which future human prosperity and wellbeing depend</h1>
+	<a href="about-us/vision-mission-goals-values" class="button bigBottomMargin">Vision, Mission, Goals and Values</a>
+</div>
+
+<script>
+	var expires = (new Date(Date.now()+ 86400*5000)).toUTCString();
+
+// Select video resolution according to screen size
+	var dir =  '\sites\default\files\2024-06';
+	var file = ['Here at NOC, We Go Deeper.mp4'];
+	var bp = [768, 1150];
+
+	var vl = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0, document.documentElement.clientHeight || 0, window.innerHeight || 0);		// get longer viewport dimension
+//	var vm = (vl > bp[0]) ? ((vl > bp[1]) ? 2 : 1) : 0;		// compare with breakpoints
+	var vm = (vl > bp[0]) ? 1 : 0;				// compare with smaller breakpoint
+
+	var vid = document.getElementById('vid');
+	var source = document.createElement('source');
+
+	jQuery(document).ready(function() {
+		source.id = 'hvid';
+		source.setAttribute('type', 'video/mp4');
+		vid.appendChild(source);
+		vid.pause();
+		source.removeAttribute('src');
+		source.setAttribute('src', dir + file[vm]);
+		vid.load();
+
+		jQuery('#hero').removeClass().addClass('m-home-hero');									// Replace hero type
+		jQuery('#hero .image').removeClass();											// zap default hero image
+		jQuery('.title-content').addClass('element-invisible');								// Hide 'title-content'
+	
+	 	if (document.cookie.match(/^(.*;)?\s*pauseFPvid\s*=\s*[^;]+(.*)?$/)) {
+			vid.pause();
+		} else {
+			vid.play();
+		}
+
+	});
+
+	window.addEventListener('resize', function(){			// uses global variables: vm (gets modified), bp, vid, dir, file
+		var vlr = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0, document.documentElement.clientHeight || 0, window.innerHeight || 0);	// get longer viewport dimension
+//		var vmr = (vlr > bp[0]) ? ((vlr > bp[1]) ? 2 : 1) : 0;	// compare with breakpoints
+		var vmr = (vlr > bp[0]) ? 1 : 0;			// compare with smaller breakpoint
+
+		if (vmr !== vm) {
+			var source = document.getElementById('hvid');
+			vid.pause();
+			source.src = dir + file[vmr];
+			vid.load();
+ 	 	 	if (document.cookie.match(/^(.*;)?\s*pauseFPvid\s*=\s*[^;]+(.*)?$/)) {
+	 	 		vid.pause();
+	 	 	} else {
+		 	 	vid.play();
+	 	 	}
+			vm = vmr;
+		}
+	});
+
+
+//	ivid.addEventListener('suspend', () => {			// ios suspends video in battery-low-power mode - uses global variables: vid
+//		jQuery('body').on('click touchstart', function () {
+//			if (!vid.playing) vid.play();			// video is not playing, so play video now
+//		})
+//	});
+
+</script>        <div id="title" class="title-content">
+        </div>
+      </div>
+      <div id="main" class="row">
+        <section id="main-content-section" class="col-sm-12">
+          <a id="main-content"></a>
+  <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  <div id="node-45455" class="node node-page clearfix" about="/national-oceanography-centre-home-page" typeof="foaf:Document">
+      <span property="dc:title" content="National Oceanography Centre - Home page" class="rdf-meta element-hidden"></span>    <div class="content clearfix">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><style>
+#img1.lazyloading, #img1.lazyloaded { background-image: url('/files/images/about/hero_support_960x640.webp'); }
+#img2.lazyloading, #img2.lazyloaded { background-image: url('/files/images/jumbotron/jumbotron-under-the-surface-jellyfish_960x640.webp'); background-position: 80% 50%; }
+#img3.lazyloading, #img3.lazyloaded { background-image: url('/files/images/ARF-2022-main-image_960x640.webp'); }
+#img4.lazyloading, #img4.lazyloaded { background-image: url('/files/images/science/Science_Research_Areas_MPOC_960x640.webp'); }
+#img5.lazyloading, #img5.lazyloaded { background-image: url('/files/images/about/ocean_economy_960x640.webp'); }
+#img11.lazyloading, #img11.lazyloaded { background-image: url('/files/images/science/Eruption_Hunga_Ha’apai_960x540.webp'); }
+#img12.lazyloading, #img12.lazyloaded { background-image: url('/files/images/RRS-James-Cook-virtual-tour_FP_960x540.webp'); }
+#img13.lazyloading, #img13.lazyloaded { background-image: url('/files/images/flame-lander-image_960x640.webp'); }
+#img14.lazyloading, #img14.lazyloaded { background-image: url('/files/images/science/ocean_science_in_action_960x540.webp'); }
+.no-webp #img1.lazyloading, .no-webp #img1.lazyloaded { background-image: url('/files/images/about/hero_support_960x640.jpg'); }
+.no-webp #img2.lazyloading, .no-webp #img2.lazyloaded { background-image: url('/files/images/jumbotron/jumbotron-under-the-surface-jellyfish_960x640.jpg'); }
+.no-webp #img3.lazyloading, .no-webp #img3.lazyloaded { background-image: url('/files/images/ARF-2022-main-image_960x640.jpg'); }
+.no-webp #img4.lazyloading, .no-webp #img4.lazyloaded { background-image: url('/files/images/science/Science_Research_Areas_MPOC_960x640.jpg'); }
+.no-webp #img5.lazyloading, .no-webp #img5.lazyloaded { background-image: url('/files/images/about/ocean_economy_960x640.jpg'); }		/* was previously /files/images/business/business-lander.jpg */
+.no-webp #img11.lazyloading, .no-webp #img11.lazyloaded { background-image: url('/files/images/science/Eruption_Hunga_Ha’apai_960x540.webp'); }
+.no-webp #img12.lazyloading, .no-webp #img12.lazyloaded { background-image: url('/files/images/RRS-James-Cook-virtual-tour_FP_960x540.jpg'); }
+.no-webp #img13.lazyloading, .no-webp #img13.lazyloaded { background-image: url('/files/images/flame-lander-image_960x640.png'); }
+.no-webp #img14.lazyloading, .no-webp #img14.lazyloaded { background-image: url('/files/images/science/ocean_science_in_action_960x540.jpg'); }		/* was previously /files/images/education/ocean_science_in_action_hero_1200px.jpg */
+</style>
+
+<div class="module altbkg">
+	<div class="m-home-ctas">
+		<div class="cta">
+			<a href="science">
+				<div class="text-content">
+					<h2>Science and Research</h2>
+					<p>Our planet is constantly changing and climate change poses a big threat to society.<p>
+					<p>With years of experience, innovative technology and some of the world’s leading scientists, we take on the challenge of understanding the complexity of our oceans, the Earth system and biosphere.</p>
+				</div>
+			</a>
+		</div>
+		<div class="cta">
+			<a href="technology">
+				<div class="text-content">
+					<h2>Technology</h2>
+					<p>The NOC is a pioneer of ocean technology – pushing the boundaries of endurance and capability with every deployment. Through decades of hard-won experience at the forefront of ocean measure&shy;ment, the lessons learned carry forward to each generation of ocean-going platforms and sensors.</p>
+				</div>
+			</a>
+		</div>
+		<div class="cta">
+			<a href="about-us/public-benefit">
+				<div class="text-content">
+					<h2>Public Benefit</h2>
+					<p>The NOC contributes to the advancement of scientific knowledge of the ocean, as part of a global endeavour. This is both a public good in its own right, which can lead to applications that result directly or indirectly in public benefit.</p>
+				</div>
+			</a>
+		</div>
+	</div>
+
+<!--
+-->
+
+	<div class="m-side-image m-side-image--left">
+		<div class="image">
+
+			<iframe class="lazyload" data-src="https://www.youtube.com/embed/aMmIczHhvPI" allowfullscreen="" loading="lazy" width="100%" height="100%" frameborder="0"></iframe>
+
+		</div>
+		<div class="text-content">
+			<h2>By gaining a deeper knowledge of the ocean, we help every living thing on our planet flourish </h2>
+			<p>As we grow into the role of an independent research organisation, we have evolved our brand to tell a more compelling, differentiating story with clarity of purpose and a distinctive look that takes inspiration from the ocean to enthuse, engage and enrol. Our aim at NOC is to build a world where everyone feels empowered and inspired to help our oceans thrive.  </p>
+			<a href="media/noc-logo-guidelines">Introduction to the new NOC brand</a>
+		</div>
+	</div>
+
+
+	<div class="m-background-image m-background-image--outline">
+		<div class="image lazyload" id="img1"></div>
+		<div class="text-content">
+			<h2>Be part of the community shaping our ocean’s future</h2>
+			<a href="about-us/support-us">Get involved</a>
+		</div>
+	</div>
+
+	<div class="m-dummy">
+		<div class="m-highlight noTopMargin noBottomMargin">
+			<a href="/under-the-surface">
+				<div class="image lazyload" id="img2"></div>
+				<div class="text-content">
+					<h2 class="long">Under the Surface</h2>
+					<div class="description">
+						<p>Discover the Big Science we’re undertaking to meet the Big Challenges facing the ocean. Find out about the research and innovation that can protect our ocean, planet and people.</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="m-side-image m-side-image--left">
+		<div class="image">
+
+			<iframe class="lazyload" data-src="https://www.youtube.com/embed/RBgsJYwtiyg" allowfullscreen="" loading="lazy" width="100%" height="100%" frameborder="0"></iframe>
+		</div>
+		<div class="text-content">
+			<h2>Into the Blue Podcast</h2>
+			<p>Into the Blue, a new podcast produced by the National Oceanography Centre, will dive deeper into a variety of hot topics relating to oceanography with a diverse selection of scientists who are all helping to enhance our knowledge of the ocean.</p>
+			<a href="education/educational-resources/into-the-blue-podcast">Watch or listen to the podcasts</a>
+		</div>
+	</div>
+ 
+<!--
+-->
+
+	<div class="m-side-image m-side-image--right">
+		<div class="image lazyload" id="img3"></div>
+		<div class="text-content">
+			<h2>NOC Annual Report and Finances</h2>
+			<p>In our latest Annual Report and Financial Statements, we share the great success stories as the UK’s leading marine research charity, building a world where everyone feels empowered and inspired to help the Ocean thrive.</p>
+			<a href="/files/documents/about/COMMS1445%20ANNUAL%20REPORT%202023%20V18%20-%20WEB.pdf" target="_blank" title="This large file opens a new window">Read the NOC Annual Report and Finances (pdf)</a>
+		</div>
+	</div>
+
+
+	<div class="m-side-image m-side-image--left">
+		<div class="image lazyload" id="img4"></div>
+		<div class="text-content">
+			<h2>The NOC provides Facilities to the UK Marine Research Community</h2>
+			<p>Advances in ocean science depend on measurements in the ocean. Satellite observations provide data for the surface layer of the ocean. To penetrate beyond the surface, scientists rely on in situ physical measurements from a range of platforms, including research ships, ocean observatories, moorings, and autonomous underwater and surface vehicles.</p>
+			<a href="facilities">More about Facilities</a>
+		</div>
+	</div>
+
+
+	<div class="m-side-image">
+		<div class="image lazyload" id="img5"></div>
+		<div class="text-content">
+			<h2>World-leading innovative Science and Technology underpinning the Ocean Economy</h2>
+			<p>The National Oceanography Centre is in a unique position of having world-leading multi-disciplinary scientific and technical expertise which can help unlock the economic and societal potential of the ocean across a range of industry sectors.</p>
+			<a href="business">Working with Business</a>
+		</div>
+	</div>
+
+
+	<div class="m-action-block-grid m-action-block-grid--four-col">
+		<h2 class="title">In the Spotlight</h2>
+		<ul>
+			<li>
+				<a href="/under-the-surface/marine-geohazards">
+					<div class="image lazyload" id="img11"></div>
+					<div class="text-content">
+						<h3>Marine Geohazards</h3>
+						<div class="description">
+							<p>Underwater phenomena including: landslides, volcanic eruptions, turbidity currents and tsunamis; these represent a threat to humans and the environment.</p>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="/facilities/ships/rrs-discovery/rrs-discovery-virtual-tour" target="_blank">
+					<div class="image lazyload" id="img12"></div>
+					<div class="text-content">
+						<h3>RRS Discovery Virtual Tour </h3>
+						<div class="description">
+							<p>Explore one of the world’s most advanced research vessels from bridge to engine room.</p>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="projects/flame">
+					<div class="image lazyload" id="img13"></div>
+					<div class="text-content">
+						<h3>FLAME</h3>
+						<div class="description">
+							<p>Aims to establish a Global Coastal Ocean Model Intercomparison Programme that will provide climate change impacts and hazard assessments to future IPCC reports.</p>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="education/educational-resources/online-learning#osa">
+					<div class="image lazyload" id="img14"></div>
+					<div class="text-content">
+						<h3>Online Learning</h3>
+						<div class="description">
+							<p>A free Ocean Science in Action educational video course.</p>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="m-dummy">
+<div class="view view-frontpage-comms view-id-frontpage_comms view-display-id-block_featured_news m-news-overview noTopPadding noBottomPadding view-dom-id-ac8c976355308bbc255f9ca0416b9c75">
+  <div class="view-content">
+  <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div>        <span><div class="m-dummy"> <div class="m-news-overview noTopPadding noBottomPadding"> <h2 class="title">News</h2> <a href="news" class="more-link">See all News</a> <div class="highlight"> <a href="/news/noc-open-day-celebrate-world-ocean-day-mark-80th-anniversary-d-day"> <div class="image"><img data-src="https://noc.ac.uk/files/images/story/COMMS.png" class="imgC lazyload" alt="Event image" loading="lazy" /></div> <div class="text-content"> <h2>NOC Open Day to celebrate World Ocean Day and mark 80th Anniversary of D-Day </h2> <ul class="meta"> <li class="tag">News</li> <li class="date">3 May 2024</li> </ul> <div class="description"> <p> Registration is now open for the National Oceanography Centre (NOC) open day on World Ocean Day (Saturday 8 June). Whether you&rsquo;re a marine enthusiast, a curious learner, or just looking for a unique experience, this event is perfect for all ages. Mark the 80th anniversary of D-...</p> </div> </div> </a> </div> </div>
+</div></span>  </div>  </div>
+  </div>
+</div>	
+<div class="view view-frontpage-comms view-id-frontpage_comms view-display-id-block_newsladder view-dom-id-105b490a5740df35ac0e77eeacfe1da1">
+  <div class="view-content">
+<div class="m-news-overview noTopPadding __noBottomPadding">    <ul>          <li class="views-row-odd views-row-first">  
+  <span class="views-field views-field-title">        <h3 class="field-content"><a href="/news/centuries-weather-data-give-new-insight-europes-stormy-past">Centuries of weather data give new insight into Europe’s stormy past</a></h3>  </span>  
+  <span class="views-field views-field-field-image">        <span class="field-content image"><img typeof="foaf:Image" src="https://noc.ac.uk/files/styles/new_ladder_thumbnail_v2/public/images/story/Great_Storm_1703_Goodwin_Sands_engraving.PNG?itok=Yk3U2mrS" width="140" height="105" alt="Image: A depiction of Admiral Beaumont&#039;s Royal Navy Squadron that was lost off Goodwin Sands during the severe storm of 1703." /></span>  </span>  
+  <div class="views-field views-field-created">        <span class="field-content">16 May 2024</span>  </div>  
+  <span class="views-field views-field-body">        <p class="field-content">
+	A new study led by the National Oceanography Centre has shed light on long-term changes in storminess across Europe.
+	Windstorms are one of the...</p>  </span></li>
+          <li class="views-row-even">  
+  <span class="views-field views-field-title">        <h3 class="field-content"><a href="/news/noc-parliamentary-reception-inspires-collaboration-ocean-action">NOC parliamentary reception inspires collaboration for ocean action</a></h3>  </span>  
+  <span class="views-field views-field-field-image">        <span class="field-content image"><img typeof="foaf:Image" src="https://noc.ac.uk/files/styles/new_ladder_thumbnail_v2/public/images/story/5L7A4322.jpg?itok=OKOztELA" width="140" height="105" alt="NOC’s newly appointed CEO Dr John Siddorn addresses guests at ‘Ocean Challenges, Ocean Solutions’ " /></span>  </span>  
+  <div class="views-field views-field-created">        <span class="field-content">25 April 2024</span>  </div>  
+  <span class="views-field views-field-body">        <p class="field-content">This week the National Oceanography Centre (NOC) hosted a parliamentary reception titled &lsquo;Ocean Challenges, Ocean Solutions&rsquo; at the House...</p>  </span></li>
+          <li class="views-row-odd">  
+  <span class="views-field views-field-title">        <h3 class="field-content"><a href="/news/celebrating-global-ocean-science-action">Celebrating global ocean science and action</a></h3>  </span>  
+  <span class="views-field views-field-field-image">        <span class="field-content image"><img typeof="foaf:Image" src="https://noc.ac.uk/files/styles/new_ladder_thumbnail_v2/public/images/story/1712847185322.jpg?itok=zatrStVF" width="140" height="105" alt="NOC representatives (left to right) included Dr Katy Hill, Dr Jo Hopkins, NOC CEO Dr John Siddorn, Dr Patricia López-Garcia, Dr Helen Snaith and Alan Evans. Prof. Ed Hill also attended." /></span>  </span>  
+  <div class="views-field views-field-created">        <span class="field-content">19 April 2024</span>  </div>  
+  <span class="views-field views-field-body">        <p class="field-content">Last week a team of scientists and ocean experts represented the National Oceanography Centre (NOC) at the UN Ocean Decade conference, to support and...</p>  </span></li>
+          <li class="views-row-even">  
+  <span class="views-field views-field-title">        <h3 class="field-content"><a href="/news/new-study-tests-if-common-mineral-could-help-reduce-atmospheres-co2">New study tests if common mineral could help reduce the atmosphere’s CO<sub>2</sub></a></h3>  </span>  
+  <span class="views-field views-field-field-image">        <span class="field-content image"><img typeof="foaf:Image" src="https://noc.ac.uk/files/styles/new_ladder_thumbnail_v2/public/images/story/silas-baisch-OCzvgBqCJKY-unsplash%20%281%29.jpg?itok=z7QQ6l-C" width="140" height="105" alt="" /></span>  </span>  
+  <div class="views-field views-field-created">        <span class="field-content">5 April 2024</span>  </div>  
+  <span class="views-field views-field-body">        <p class="field-content">
+	A study led by the National Oceanography Centre (NOC) has evaluated a potential way to remove CO2 from the atmosphere using the ocean....</p>  </span></li>
+          <li class="views-row-odd">  
+  <span class="views-field views-field-title">        <h3 class="field-content"><a href="/news/leading-scientists-reach-milestone-anniversary-researching-amoc-better-understand-climate">Leading scientists reach milestone anniversary researching the AMOC to better understand climate change</a></h3>  </span>  
+  <span class="views-field views-field-field-image">        <span class="field-content image"><img typeof="foaf:Image" src="https://noc.ac.uk/files/styles/new_ladder_thumbnail_v2/public/images/story/5L7A3660%20%281%29.jpg?itok=7eOZsEKz" width="140" height="105" alt="" /></span>  </span>  
+  <div class="views-field views-field-created">        <span class="field-content">28 March 2024</span>  </div>  
+  <span class="views-field views-field-body">        <p class="field-content">
+	Scientists from the National Oceanography Centre (NOC) have set sail on NOC&rsquo;s world-leading research vessel RRS Discovery.
+	This is NOC...</p>  </span></li>
+          <li class="views-row-even views-row-last">  
+  <span class="views-field views-field-title">        <h3 class="field-content"><a href="/news/explore-ocean-science-royal-society-summer-science-exhibition">Explore Ocean Science at the Royal Society Summer Science Exhibition</a></h3>  </span>  
+  <span class="views-field views-field-field-image">        <span class="field-content image"><img typeof="foaf:Image" src="https://noc.ac.uk/files/styles/new_ladder_thumbnail_v2/public/images/story/PuffSphere%20-%20NOC%20%28002%29.png?itok=3RX9Iq9i" width="140" height="105" alt="" /></span>  </span>  
+  <div class="views-field views-field-created">        <span class="field-content">25 March 2024</span>  </div>  
+  <span class="views-field views-field-body">        <p class="field-content">
+	The National Oceanography Centre (NOC) and other leading UK marine scientists will be at the Summer Science Exhibition, the Royal Society&rsquo;s...</p>  </span></li>
+      </ul></div>  </div>
+</div><div class="view view-frontpage-comms view-id-frontpage_comms view-display-id-block_featured_event m-news-overview noTopPadding noBottomPadding view-dom-id-923da8c1d31ab60f5642148c91a0d00e">
+  <div class="view-content">
+  <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div>        <span><div class="m-dummy"> <div class="m-news-overview noTopPadding noBottomPadding"> <h2 class="title">Events</h2> <a href="news/event-news" class="more-link">See all Events</a> <div class="highlight noBottomMargin /* add noBottomMargin if there's just one */"> <a href="/news/noc-smmr-annual-conference-2024"> <div class="image"><img data-src="" class="imgC lazyload" alt="Event image" loading="lazy" /></div> <div class="text-content"> <h2>NOC at the SMMR Annual Conference 2024</h2> <ul class="meta"> <li class="tag">Events</li> <li class="date"></li> </ul> <div class="description"> <p>The National Oceanography Centre (NOC) will be represented at theThird Annual Conference for the Sustainable Management of UK Marine Resources...</p> </div> </div> </a> </div> </div>
+</div></span>  </div>  </div>
+  </div>
+</div>	
+	</div>
+
+	<div class="m-highlighted-publications __bigBottomMargin">
+
+<div class="view view-frontpage-comms view-id-frontpage_comms view-display-id-block_publications view-dom-id-aa5f799652806702ea6443c506d75145">
+  <div class="view-header">
+<h2 class="title">Latest Publications</h2>
+<a class="more-link" href="/publications">See all Publications</a>  </div>
+  <div class="view-content">
+<ul class="item-list _bigBottomMargin">
+  <li>
+    <a href="/publication/537398" title="Investigating the physiological ecology of mesopelagic zooplankton in the Scotia Sea (Southern Ocean) using lipid and stable isotope signatures">
+      <div class="text-content">
+        <h3>Investigating the physiological ecology of mesopelagic zooplankton in the Scotia Sea (Southern Ocean) using lipid and stable...</h3>
+      </div>
+      <div class="meta">
+        <ul>
+          <li><em>Deep Sea Research Part I: Oceanographic Research Papers</em>&nbsp;</li>
+          <li>Published 2024</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="/publication/537355" title="Localized general vertical coordinates for quasi&#8208;Eulerian ocean models: The Nordic overflows test&#8208;case">
+      <div class="text-content">
+        <h3>Localized general vertical coordinates for quasi‐Eulerian ocean models: The Nordic overflows test‐case</h3>
+      </div>
+      <div class="meta">
+        <ul>
+          <li><em>Journal of Advances in Modeling Earth Systems</em>&nbsp;</li>
+          <li>Published 2024</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="/publication/537356" title="Global&#8208;scale evaluation of coastal ocean alkalinity enhancement in a fully coupled Earth system model">
+      <div class="text-content">
+        <h3>Global‐scale evaluation of coastal ocean alkalinity enhancement in a fully coupled Earth system model</h3>
+      </div>
+      <div class="meta">
+        <ul>
+          <li><em>Earth's Future</em>&nbsp;</li>
+          <li>Published 2024</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="/publication/537340" title="A model for community-driven development of best practices: the Ocean Observatories Initiative Biogeochemical Sensor Data Best Practices and User Guide">
+      <div class="text-content">
+        <h3>A model for community-driven development of best practices: the Ocean Observatories Initiative Biogeochemical Sensor Data...</h3>
+      </div>
+      <div class="meta">
+        <ul>
+          <li><em>Frontiers in Marine Science</em>&nbsp;</li>
+          <li>Published 2024</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+</ul>
+  </div>
+</div>	<p style="clear: both;">&nbsp;</p>
+	</div>
+	<div class="m-dummy0"></div><div class="m-dummy1"></div><style>#main{margin-bottom:0;}</style></div></div></div></div>  </div>
+    </div>
+
+</section> <!-- /.block -->
+<section id="block-block-21" class="block block-block clearfix">
+
+      
+  <script defer src="/sites/all/libraries/ytvid/js/ytvid.min.js"></script>
+</section> <!-- /.block -->
+  </div>
+        </section>
+      </div>
+      <div class="m-site-footer">
+        <footer class="footer">
+  <div class="region region-footer">
+    <section id="block-block-2" class="block block-block clearfix">
+
+      
+  <style>
+.primary-footer dl{overflow:visible;width:20em;padding:0;margin: 0;}
+.primary-footer dt{font-weight:normal;float:left;width:5.45em;padding:0;margin:0;}
+.primary-footer dd{float:left;width:calc(100% - 5.45em);padding:0;margin:0;}
+@media(max-width: 1500px) {.m-site-footer .secondary-footer .legal {margin-top:30px;width:100%;} }
+.footer-navigation ins { text-decoration: none; }	/* Workaround for Hireserve Careers font override with <span>... use <ins> (no underline) instead */
+</style>
+<div class="primary-footer">
+	<div class="logo">
+		<a href="/" id="noc-logo"><img alt="National Oceanography Centre [logo]" class="lazyload" data-src="/sites/all/themes/NOC7X-main/img/logo-noc.svg" width="126" height="126" /><span>National Oceanography Centre</span></a>
+		<p>Registered address:<br />European Way, Southampton &nbsp;SO14 3ZH</p>
+		<p style="margin-bottom: 0;">Company no.: 11444362</p>
+		<dl><dt>Charity no.:</dt><dd>1185265 &nbsp;(England and Wales)</dd><dt><i class="fa fa-blank"></i></dt><dd>SC049896 &nbsp;(Scotland)</dd></dl>
+		<p style="clear: both; padding-top: 20px;"><i aria-hidden="true" class="fa fa-phone fa-flip-horizontal fa-lg fa-fw"><span class="element-invisible">Telephone:</span></i> <a href="tel:+44-300-1312321">+44 (0)300 131 2321</a> &nbsp;Southampton<br />
+			<i aria-hidden="true" class="fa fa-blank fa-lg fa-fw"><span class="element-invisible">Telephone:</span></i> <a href="tel:+44-151-7954800">+44 (0)151 795 4800</a> &nbsp;Liverpool</p>
+	</div>
+
+	<div class="footer-navigation">
+		<h2 class="noWrap">Get in touch&nbsp; &nbsp;</h2>
+		<ul>
+			<li><a href="/about-us/contact-us">Contact us</a></li>
+			<li><a href="/media">Media Enquiries</a></li>
+			<li><a href="/about-us/staff-directory">Staff Directory</a></li>
+		</ul>
+	</div>
+
+	<div class="footer-navigation __email-signup">
+		<h2 class="noWrap">Ocean News &nbsp;</h2>
+		<p class="clearBoth">Bite-sized updates straight to your inbox</p>
+		<p><a href="/about-us/nocmail">Subscribe now</a></p>
+	</div>
+
+	<div class="footer-navigation">
+		<h2><ins class="noWrap">Help our</ins> <ins class="noWrap">ocean thrive</ins></h2>
+		<p class="clearBoth">Play a part in delivering scientific understanding and education</p>
+		<p><a href="/about-us/support-us">Support us</a></p>
+	</div>
+
+	<div class="social-networks">
+		<h2 class="noWrap">Follow us&nbsp; &nbsp;</h2>
+		<ul>
+			<li><a href="https://www.facebook.com/NationalOceanographyCentre" target="_blank" rel="noopener"><i class="fa-brands fa-facebook" aria-hidden="true"></i><span class="text">Facebook</span></a></li><li><a href="https://twitter.com/NOCnews" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i><span class="text">Twitter</span></a></li><li><a href="https://www.youtube.com/user/NOCSnews" target="_blank" rel="noopener"><i class="fa-brands fa-youtube" aria-hidden="true"></i><span class="text">YouTube</span></a></li><li><a href="https://www.tiktok.com/@nocnews" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok" aria-hidden="true"></i><span class="text">TikTok</span></a></li><li><a href="https://www.instagram.com/NOCnews" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span class="text">Instagram</span></a></li><li><a href="https://www.linkedin.com/company/national-oceanography-centre" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span class="text">LinkedIn</span></a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="secondary-footer">
+	<div class="partners">
+		<ul>
+			<li class="iip"><a href="/about-us/our-commitments#iip"><img alt="Investors in People [logo]" class="lazyload" data-src="/sites/all/themes/NOC7X-main/img/logo-iip_dark.svg" width="200" height="61" /></a></li>
+			<li class="fr"><a href="https://www.fundraisingregulator.org.uk/directory/national-oceanography-centre" target="_blank"><img alt="Fundraising Regulator [logo]" class="lazyload" data-src="/sites/all/themes/NOC7X-main/img/FRbadge_dark.svg" width="245" height="75" /></a></li>
+		</ul>
+	</div>
+
+	<div class="legal">
+		<p>&copy; 2024&nbsp; The National Oceanography Centre (NOC) owns copyright of the material available at this site, unless otherwise stated. All rights reserved.</p>
+		<div class="navigation">
+			<ul>
+				<li><a href="/disclaimer">Disclaimer</a></li>
+				<li><a href="/about-us/privacy-notice">Privacy and cookies</a></li>
+                                <li><a href="/about-us/our-commitments#modsl">Modern slavery</a></li>
+				<li><a href="/about-us/contact-us">Contact us</a></li>
+				<li><a href="/about-us/staff">Staff resources</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</section> <!-- /.block -->
+<section id="block-block-24" class="block block-block clearfix">
+
+      
+  <script type="text/javascript" id="hs-script-loader" defer src="//js.hs-scripts.com/19489638.js" crossorigin="anonymous"></script>
+
+</section> <!-- /.block -->
+  </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- respond.js IE8 support of media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://noc.ac.uk/sites/all/themes/NOC7X-main/respond.min.js"></script>
+      <style>
+        body { max-width: 1680px; }
+      </style>
+    <![endif]-->
+    <div class="region region-page-bottom">
+    <div><a rel="nofollow" href="/02c357d89b6a41fe.php"><!-- d96b37e25c18f40a --></a></div>  </div>
+<script>window.eu_cookie_compliance_cookie_name = "";</script>

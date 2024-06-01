@@ -1,0 +1,34 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      assets/css/application.min.css: {}
+      assets/css/bootstrap.min.css: {}
+      assets/css/calendar_multiday.css: {}
+      assets/css/ctools.css: {}
+      assets/css/field.css: {}
+      assets/css/fonts.min.css: {}
+      assets/css/noc-local_style.css: {}
+      assets/css/node.css: {}
+      assets/css/photoswipe.css: {}
+      assets/css/pre-appl.css: {}
+      assets/css/simplebar.css: {}
+      assets/css/style.min.css: {}
+      assets/css/system.base.css: {}
+      assets/css/views.css: {}
+      assets/css/default-skin.css: {}
+      assets/css/overrides.css: {}
+      assets/css/ckeditor.css: {}
+      assets/css/lightbox.css: {}
+      assets/css/eu_cookie_compliance.css: {}
+      assets/css/ctool.css: {}
+    
+  js:
+    assets/js/js_sZ7SL8ZcH7g2bMKn6a3H8N3HOwVfWTBgnWh6_2GTgD4.js: {}
+    assets/js/js_smlq3ZKHr89qT85g8aTLvSZK5MWPoCk1rma6l5067i8.js: {}
+    assets/js/js_RulCPHj8aUtatsXPqRSFtJIhBjBSAzFXZzADEVD4CHY.js: {}
+    assets/js/js_FU6Dr9IVA4ORwW3uWUhQ4M6HfJqAs4m4SMyKUiqNlZY.js: {}
+    assets/js/js.js: {}
+    assets/js/js_lK2fTMbvCIAuvF5Mx6Fs-RiIj41D_EpdSQTluL1ZXIc.js: {}
+    assets/js/js_b5uBqrfPrs_UEmgBeVFSOcXgjdijNE3mS-ZnwQ0jdnU.js: {}
+    assets/js/js_B2uv6dkjoYobfQVyuXdchgrpnnx4oM0TkP_bDVf8Qrg.js: {}
